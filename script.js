@@ -74,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCounter(currentTime) {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-
-      // easeOutCubic
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.floor(target * eased);
 
@@ -110,6 +108,39 @@ document.addEventListener("DOMContentLoaded", function () {
       statsObserver.observe(stat);
     });
   }
+
+  /* =========================================
+     MOBILE CERTIFICATE DETAILS TOGGLE
+  ========================================= */
+  const certToggleButtons = document.querySelectorAll(".cert-details-toggle");
+
+  certToggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("show");
+
+      certToggleButtons.forEach((otherButton) => {
+        const otherPanel = otherButton.nextElementSibling;
+        if (otherPanel && otherPanel !== panel) {
+          otherPanel.classList.remove("show");
+          otherButton.classList.remove("active");
+          otherButton.textContent = "View Details";
+        }
+      });
+
+      if (isOpen) {
+        panel.classList.remove("show");
+        this.classList.remove("active");
+        this.textContent = "View Details";
+      } else {
+        panel.classList.add("show");
+        this.classList.add("active");
+        this.textContent = "Hide Details";
+      }
+    });
+  });
 });
 
 /* =========================================
