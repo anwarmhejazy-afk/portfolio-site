@@ -1790,3 +1790,116 @@ a {
     padding: 0 9px;
   }
 }
+
+/* =========================================
+   PROJECT IMPACT / RESULTS
+========================================= */
+
+.metrics-note {
+  margin: 14px 0 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.project-impact {
+  margin-top: 22px;
+}
+
+.project-impact h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--navy);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.impact-box {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 42, 74, 0.08);
+}
+
+.impact-box strong {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--navy);
+}
+
+.impact-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.impact-box.before {
+  background: #f7f9fc;
+}
+
+.impact-box.after {
+  background: #edf4ff;
+}
+
+.results {
+  margin-top: 12px;
+}
+
+.results h5 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.results ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.results li {
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* =========================================
+   SMALL PREMIUM POLISH
+========================================= */
+
+.project-showcase-content .project-points li,
+.project-showcase-content .results li,
+.project-showcase-content .impact-box p {
+  max-width: 720px;
+}
+
+.recruiter-strip p,
+.section-intro,
+.metrics-note {
+  max-width: 980px;
+}
+
+@media (max-width: 768px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-impact h4 {
+    font-size: 16px;
+  }
+
+  .impact-box {
+    padding: 14px;
+  }
+
+  .impact-box p,
+  .results li,
+  .metrics-note {
+    font-size: 14px;
+  }
+}

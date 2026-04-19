@@ -67,62 +67,41 @@
         <div class="contact-card card fade-in-section">
           <h3>Get In Touch</h3>
 
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:anwar_hejazy@hotmail.com">anwar_hejazy@hotmail.com</a>
-          </p>
-
-          <p>
-            <strong>WhatsApp:</strong>
-            <a href="https://wa.me/971528112120" target="_blank">+971 52 811 2120</a>
-          </p>
-
-          <p>
-            <strong>Location:</strong>
-            Sharjah, United Arab Emirates
-          </p>
-
-          <p>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/anwar-hegazy-a0897914b" target="_blank">View LinkedIn Profile</a>
-          </p>
-
-          <p>
-            <strong>References:</strong>
-            Available upon request
-          </p>
+          <p><strong>Email:</strong> <a href="mailto:anwar_hejazy@hotmail.com">anwar_hejazy@hotmail.com</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/971528112120" target="_blank">+971 52 811 2120</a></p>
+          <p><strong>Location:</strong> Sharjah, United Arab Emirates</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anwar-hegazy-a0897914b" target="_blank">View LinkedIn Profile</a></p>
+          <p><strong>References:</strong> Available upon request</p>
         </div>
 
         <div class="contact-card card fade-in-section">
           <h3>Send Inquiry</h3>
 
-            <form onsubmit="sendToWhatsApp(event)" class="demo-form form-grid">
+          <form onsubmit="sendToWhatsApp(event)" class="demo-form form-grid">
+            <div class="two-col">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
 
-  <div class="two-col">
-    <div class="form-group">
-      <label for="firstName">First Name *</label>
-      <input type="text" id="firstName" name="firstName" required />
-    </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+            </div>
 
-    <div class="form-group">
-      <label for="lastName">Last Name *</label>
-      <input type="text" id="lastName" name="lastName" required />
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-  <div class="form-group">
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email" required />
-  </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
 
-  <div class="form-group">
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" required></textarea>
-  </div>
-
-  <button type="submit" class="btn-primary">Send Inquiry</button>
-
-</form>
+            <button type="submit" class="btn-primary">Send Inquiry</button>
+          </form>
         </div>
       </div>
 
@@ -134,16 +113,12 @@
 
         <div class="contact-mini card fade-in-section">
           <h4>Email</h4>
-          <p>
-            <a href="mailto:anwar_hejazy@hotmail.com">anwar_hejazy@hotmail.com</a>
-          </p>
+          <p><a href="mailto:anwar_hejazy@hotmail.com">anwar_hejazy@hotmail.com</a></p>
         </div>
 
         <div class="contact-mini card fade-in-section">
           <h4>WhatsApp</h4>
-          <p>
-            <a href="https://wa.me/971528112120" target="_blank">Open WhatsApp Chat</a>
-          </p>
+          <p><a href="https://wa.me/971528112120" target="_blank">Open WhatsApp Chat</a></p>
         </div>
       </div>
 
