@@ -1903,3 +1903,244 @@ a {
     font-size: 14px;
   }
 }
+
+/* =========================================
+   SAFE GLOBAL OVERFLOW FIX
+   Prevents right-left page movement
+========================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section,
+header,
+footer,
+.container,
+.project-showcase,
+.timeline-card,
+.highlight-card,
+.recruiter-strip {
+  max-width: 100%;
+}
+
+/* =========================================
+   PROJECTS DESKTOP / MOBILE SAFE FIXES
+========================================= */
+
+@media (min-width: 1201px) {
+  .project-showcase,
+  .project-showcase.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile: make project cards compact */
+@media (max-width: 768px) {
+  .project-impact {
+    display: none;
+  }
+
+  .project-showcase {
+    overflow: hidden;
+  }
+
+}
+
+/* =========================================
+   EXPERIENCE PAGE DESKTOP CLEANER LAYOUT
+========================================= */
+
+@media (min-width: 901px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline-card,
+  .highlight-card {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline,
+  .highlights-grid {
+    gap: 16px;
+  }
+
+  .timeline-card,
+  .highlight-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .project-showcase {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .project-showcase-content p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .project-points {
+    margin-bottom: 10px;
+  }
+
+  .project-points li {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 5px;
+  }
+
+  .skills-tags {
+    margin: 10px 0 12px;
+    gap: 6px;
+  }
+
+  .skills-tags span {
+    font-size: 11px;
+    min-height: 28px;
+    padding: 0 8px;
+  }
+
+  .project-links {
+    margin-top: 8px;
+  }
+
+  .project-showcase-content h2 {
+    font-size: 26px;
+    line-height: 1.08;
+  }
+}
+
+/* =========================================
+   EXPERIENCE PAGE PREMIUM POLISH
+========================================= */
+
+.timeline {
+  align-items: stretch;
+}
+
+.timeline-card,
+.highlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card::before,
+.highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(47, 111, 221, 0.03),
+      transparent 45%
+    );
+  pointer-events: none;
+}
+
+.timeline-card h3 {
+  letter-spacing: -0.02em;
+}
+
+.highlight-card h4 {
+  letter-spacing: -0.015em;
+}
+
+.timeline-card p,
+.highlight-card p {
+  max-width: 95%;
+}
+
+@media (min-width: 901px) {
+
+  .timeline {
+    gap: 24px;
+  }
+
+  .highlights-grid {
+    gap: 24px;
+  }
+
+  .timeline-card {
+    padding: 32px;
+    min-height: 100%;
+  }
+
+  .highlight-card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .timeline-card h3 {
+    font-size: 24px;
+  }
+
+  .highlight-card h4 {
+    font-size: 19px;
+  }
+
+  .timeline-card,
+  .highlight-card {
+    border-radius: 18px;
+  }
+}
+
+/* =========================================
+   MOBILE PROJECT DETAILS TOGGLE
+========================================= */
+
+  .project-details-toggle {
+   display: none !important;
+}
+
+@media (max-width: 768px) {
+
+   .project-details-toggle {
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid #d9e4f2;
+    background: #ffffff;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .project-details-toggle.active {
+    background: var(--blue-dark);
+    color: white;
+    border-color: var(--blue-dark);
+  }
+
+  .project-impact {
+    display: none !important;
+    margin-top: 14px;
+  }
+
+  .project-impact.show {
+  display: block !important;
+  }
+}

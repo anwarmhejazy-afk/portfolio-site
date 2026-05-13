@@ -141,6 +141,40 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  /* =========================================
+     MOBILE PROJECT DETAILS TOGGLE
+  ========================================= */
+  const projectToggleButtons = document.querySelectorAll(".project-details-toggle");
+
+  projectToggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("show");
+
+      projectToggleButtons.forEach((otherButton) => {
+        const otherPanel = otherButton.nextElementSibling;
+
+        if (otherPanel && otherPanel !== panel) {
+          otherPanel.classList.remove("show");
+          otherButton.classList.remove("active");
+          otherButton.textContent = "View Project Details";
+        }
+      });
+
+      if (isOpen) {
+        panel.classList.remove("show");
+        this.classList.remove("active");
+        this.textContent = "View Project Details";
+      } else {
+        panel.classList.add("show");
+        this.classList.add("active");
+        this.textContent = "Hide Project Details";
+      }
+    });
+  });
 });
 
 /* =========================================
